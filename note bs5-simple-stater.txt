@@ -1,0 +1,45 @@
+BS5-SAMPLE-STATER
+
+- ติดตั้ง npm 
+npm init
+ใส่รายละเอียด
+
+
+npm install sass
+
+เพิ่มไพล์ gitignore เพื่อเมื่อ upload git บอกว่าไม่ต้อง load ไพล depenency ไปด้วย
+
+.gitignore
+
+
+
+
+
+- แก้ไข ไพล package.json เพื่อให้ อ่านไพล style.scss
+"scripts": {
+    "sass:build": "sass --no-source-map scss:css",
+    "sass:watch": "sass --no-source-map --watch scss:css"
+  },
+
+complie scss เพื่อสร้างไพล style.css จาก style.scss
+- npm install sass:build
+- npm install sass:watch   (เพื่อให้ update ถ้ามีการแก้ไข ไพล style.scss)
+
+- ติดตั้ง bootstrap
+npm i bootstrap
+
+- สร้าง floder scss
+สร้าง ไพล style.scss
+สร้าง ไพล bootstrap.scss
+
+
+- ดึงข้อมูลในตัวแปร ../node_modules/bootstrap/scss/bootstrap.scss เพื่อให้นำข้อมูลไปเก็บที่ bootstrap.scss 
+@import '../node_modules/bootstrap/scss/bootstrap.scss'
+
+complie เพื่อดึงข้อมูล ไปเก็บใน bootstrap.css
+npm install sass:build 
+
+สร้าง link ใน index.html
+
+ <link rel="stylesheet" href="css/styles.css">
+ <link rel="stylesheet" href="css/bootstrap.css">
